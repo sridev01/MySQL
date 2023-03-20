@@ -1,0 +1,33 @@
+CREATE TABLE IF NOT EXISTS countries (
+COUNTRY_ID VARCHAR(2),
+COUNTRY_NAME VARCHAR(40),
+REGION_ID DECIMAL(10,0)
+);
+
+USE project;
+describe countries;
+
+ALTER TABLE countries
+ADD COUNTRY_CODE VARCHAR(3);
+
+ALTER TABLE countries
+DROP COUNTRY_CODE;
+ 
+INSERT INTO countries
+VALUES ("01","KNOHA","2022");
+
+
+SELECT * FROM countries;
+
+INSERT INTO countries (COUNTRY_ID,COUNTRY_NAME)
+VALUE ("02","JAPAN");
+
+
+
+
+
+
+
+
+UPDATE countries
+SET REGION_ID = NULL;
